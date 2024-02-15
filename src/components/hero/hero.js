@@ -9,8 +9,8 @@ const Hero = () => {
       <div className={styles.overlay}></div>
       <Image src="/cover.jpg" alt="Mount Kenya Hiking" layout="fill" objectFit="cover" />
       <div className={styles.text}>
-        <h1>Share your Mt. Kenya hiking experiences</h1>
-        <p>Help other hikers prepare.</p>
+        <h1> Curated Mount Kenya Hiking Experiences. </h1>
+        <p>Connect Through Mount Kenya. Tell your Hiking stories.</p>
       </div>
     </div>
   );
