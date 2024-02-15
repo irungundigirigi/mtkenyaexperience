@@ -67,3 +67,11 @@
   .signInButton:hover {
     background-color: #ffcc00;
   }
+  @media (max-width: 700px) {
+   .logoText{
+    font-size: 13px;
+   }
+   .signIn{
+    font-size: 13px;
+   }
+  }
