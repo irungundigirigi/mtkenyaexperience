@@ -23,7 +23,7 @@
 @media (max-width: 700px) {
     .postContainer
     {
-      padding: 10px;
+      padding: 20px;
       height: auto;
     }
     .title {
