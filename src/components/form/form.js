@@ -50,7 +50,7 @@ const Form = ({ session }) => {
     };
 
     return (
-        <div className={styles.postContainer}>
+        <div className={styles.formContainer}>
             <form onSubmit={handleSubmit}>
                 <div className={styles.authorContainer}>
                     Writing as @{session.user.name}

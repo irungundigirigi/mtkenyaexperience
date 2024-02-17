@@ -1,7 +1,9 @@
 import React from 'react';
+import Image from 'next/image'
 import styles from './post.module.css';
 
-const Post = ({ author, title, body, timestamp }) => {
+
+const Post = async ({ author, title, body, timestamp }) => {
     return (
         <div className={styles.postContainer}>
             <div className={styles.authorContainer}>Posted by {author} on {timestamp}</div>

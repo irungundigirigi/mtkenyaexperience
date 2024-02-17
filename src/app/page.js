@@ -12,9 +12,11 @@ export default async function  Home() {
       <Hero />
       <div className={styles.mainContent}>
         <div className={styles.posts}> <Posts /></div>
-      <div className={styles.form}> {session && <Form session={session} />}</div>
+        <div className={styles.form}> {session && <Form session={session} />}</div>
       </div>
 
     </main>
   );
 }
+
+
