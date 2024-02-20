@@ -7,38 +7,47 @@ const Form = ({ session }) => {
     const [formData, setFormData] = useState({
         author: session.user.name,
         title: '',
-        body: ''
+        body: '',
+        image: null // New state for the image file
     });
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
+        const { name, value, files } = e.target;
+        if (name === 'image') {
+            setFormData(prevState => ({
+                ...prevState,
+                [name]: files[0] // Store the first selected image file
+            }));
+        } else {
+            setFormData(prevState => ({
+                ...prevState,
+                [name]: value
+            }));
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const postData = {
-                email: session.user.email,
-                author: session.user.name,
-                title: formData.title,
-                body: formData.body
-            };
+            const postData = new FormData();
+            postData.append('email', session.user.email);
+            postData.append('author', session.user.name);
+            postData.append('title', formData.title);
+            postData.append('body', formData.body);
+            postData.append('image', formData.image); // Append the image file to FormData
+
+            console.log(postData);
+
             const response = await fetch('https://mt-kenya-experience-api.vercel.app/share', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postData),
+                body: postData, // Send FormData instead of JSON.stringify(postData)
             });
             if (response.ok) {
                 setFormData({
                     author: '',
                     title: '',
-                    body: ''
+                    body: '',
+                    image: null // Reset the image state
                 });
                 console.log('Form submitted successfully');
             } else {
@@ -73,6 +82,13 @@ const Form = ({ session }) => {
                         onChange={handleChange}
                     />
                 </div>
+                <div className={styles.imageInput}>
+                    <input
+                        type="file"
+                        name="image"
+                        onChange={handleChange}
+                    />
+                </div>
                 <button className={styles.submit} type="submit">Post</button>
             </form>
         </div>
@@ -80,4 +96,3 @@ const Form = ({ session }) => {
 };
 
 export default Form;
-
