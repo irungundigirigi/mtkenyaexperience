@@ -28,7 +28,8 @@ const Posts = async () => {
                     author={post.author}
                     title={post.title}
                     body={post.body}
-                    timestamp={post.created_at}
+                    image_url = {post.image_url}
+                    timestamp={post.timestamp}
                 />
                 </div>
             ))}

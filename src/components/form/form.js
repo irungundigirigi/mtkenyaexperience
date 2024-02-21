@@ -35,6 +35,7 @@ const Form = ({ session }) => {
             postData.append('title', formData.title);
             postData.append('body', formData.body);
             postData.append('image', formData.image); // Append the image file to FormData
+            
 
             console.log(postData);
 
