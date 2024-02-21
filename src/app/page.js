@@ -20,7 +20,6 @@ export default async function  Home() {
         <div className={styles.posts}> <Posts session={session} posts={posts}/></div>
         <div className={styles.form}> {session && <Form session={session} />}</div>
       </div>
-
     </main>
   );
 }
