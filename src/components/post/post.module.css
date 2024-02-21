@@ -21,10 +21,10 @@
 }
 
 .body {
-    height: auto;
+    height:70%;
     padding-top: 10px;
     color: #343a40;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .imageContainer {
