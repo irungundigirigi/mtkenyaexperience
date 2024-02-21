@@ -2,20 +2,7 @@ import styles from './posts.module.css';
 import Post from '../post/post'
 import {auth} from "../../auth"
 
-async function getPosts() {
-    const response = await fetch('https://mt-kenya-experience-api.vercel.app/posts');
-    return response.json()
-  }
-
-const Posts = async () => {
-
-    const posts = await getPosts()
-    const session = await auth()
-
-    // Check if posts is not defined or empty
-    if (!posts || posts.length === 0) {
-        return <div>No posts found</div>;
-    }
+const Posts =  ({session, posts} ) => {
 
     return (
         <div className={session ? styles.posts : styles.psts}>

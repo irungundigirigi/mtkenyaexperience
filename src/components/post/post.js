@@ -1,15 +1,29 @@
-import React from 'react';
-import Image from 'next/image'
+'use client'
+import React, { useState } from 'react';
+import Image from 'next/image';
 import styles from './post.module.css';
 
+const Post = ({ author, title, body, image_url, timestamp }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
 
-const Post = async ({ author, title, body,image_url, timestamp }) => {
+    const toggleImageSize = () => {
+        setIsExpanded(!isExpanded);
+    };
+
     return (
-        <div className={styles.postContainer}>
+        <div className={styles.postContainer} onClick={toggleImageSize}>
             <div className={styles.authorContainer}>Posted by {author} on {timestamp}</div>
             <div className={styles.title}>{title}</div>
             <div className={styles.body}>{body}</div>
-            <div className={styles.img}><img className={styles.postImage} width='200' height='100' src={image_url}/></div>
+            {isExpanded && (
+                <div className={styles.imageContainer}>
+                    <img
+                        src={image_url}
+                        alt="Post Image"
+                        className={styles.postImage}
+                    />
+                </div>
+            )}
         </div>
     );
 };
