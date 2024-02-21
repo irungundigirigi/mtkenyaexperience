@@ -7,7 +7,7 @@ export default async function  Footer() {
 
   return (
     <main className={styles.footer}>
-
+      <div></div>
     </main>
   );
 }

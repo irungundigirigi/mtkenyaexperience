@@ -30,13 +30,17 @@
 .title {
   color:#9e0059;
   width: 80%;
-  font-size: 60px;
+  font-size: 30px;
 }
 
 .subtitle {
+  padding: 10px 0;
+  font-size: 15px;
   width:100%;
-  font-size: 20px;
-  color: #8592b5;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 13px;
+  color: #2b2d42;
 }
 
 @media (max-width: 600px) {
