@@ -15,8 +15,8 @@ const CoverComponent = () => {
       </div>
       <div className={styles.textContainer}>
         <div className={styles.heroText}>
-          <h1 className={styles.title}>Curated Mt Kenya Hiking experiences</h1>
-          <h2 className={styles.subtitle}>Share your experiences</h2>
+          <h1 className={styles.title}>Your Curated Mt. Kenya Expedition Hub</h1>
+          <h2 className={styles.subtitle}>Share your tales.</h2>
         </div>
       </div>
     </div>

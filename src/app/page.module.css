@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem 0 0 0;
-  width: 100vw;
+  width: auto;
   height: auto;
   background-color:#ced4da;
 }
@@ -28,6 +28,7 @@
 }
 .posts{
   flex: 1;
+  flex-wrap: wrap;
   padding: 10px;
   display: flex;
   flex-direction: column;

@@ -1,8 +1,8 @@
 import styles from './posts.module.css';
 import Post from '../post/post'
-import {auth} from "../../auth"
 
 const Posts =  ({session, posts} ) => {
+
 
     return (
         <div className={session ? styles.posts : styles.psts}>

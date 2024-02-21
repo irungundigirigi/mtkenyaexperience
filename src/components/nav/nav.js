@@ -37,7 +37,7 @@ const Navbar = async() => {
       <div className={styles.logoContainer}>
         <img src="/logo.png" alt="Logo" className={styles.logo} />
         <Link href="/">
-          <span className={styles.logoText}>Mt Kenya Forum </span>
+          <span className={styles.logoText}>Mt Kenya Experience </span>
         </Link>
       </div>
       <div className={styles.signIn}>
